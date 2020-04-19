@@ -7,7 +7,7 @@ stages{
         stage('Build'){
             steps {
                 sh 'mvn clean package'
-                sh "docker build . -t tomcatwebapp:${env.NUILD_ID}"
+                sh "/usr/local/Cellar/docker build . -t tomcatwebapp:${env.NUILD_ID}"
             }
         }
     }
